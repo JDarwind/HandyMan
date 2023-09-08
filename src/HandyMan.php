@@ -11,15 +11,18 @@ class HandyMan extends Application
 
     protected function __construct(string $name = 'UNKNOWN', string $version = 'UNKNOWN')
     {
-        parent::__construct($name,$version);
         $this->config = include_once "./config/config.php";
+
+        $applicationVersion = $this->getConfig('version');
+        $applicationName = $this->getConfig('applicationName');
+
+        parent::__construct($applicationName,$applicationVersion);
     }
 
-    public static function create(string $name = 'UNKNOWN', string $version = 'UNKNOWN'):self
+    public static function create():self
     {
-
         if(!self::$instance){
-            self::$instance = new self($name, $version);
+            self::$instance = new self();
         }
         return self::$instance;
     }

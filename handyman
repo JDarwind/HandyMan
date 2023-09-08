@@ -6,6 +6,6 @@ use JDarwind\Handyman\HandyMan;
 
 include_once "./vendor/autoload.php";
 
-$handyman = HandyMan::create('handyman', 'v0.0.0.1');
+$handyman = HandyMan::create();
 
 $handyman->run();
