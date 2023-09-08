@@ -1,0 +1,12 @@
+{
+    "name": "jdarwind/handyman",
+    "autoload": {
+        "psr-4": {
+            "JDarwind\\Handyman\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/console": "^6.3",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
